@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgundy</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="landing-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <script src="landing-page.js" defer></script>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAzUrt9-_1VoWUtOc_L6N5cgjALtmAM5_c",
+            authDomain: "burgundy-7e134.firebaseapp.com",
+            projectId: "burgundy-7e134",
+            storageBucket: "burgundy-7e134.appspot.com",
+            messagingSenderId: "543514783560",
+            appId: "1:543514783560:web:3230c344eb2b5106420d7d",
+            measurementId: "G-XVGMCK4L2R"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <nav class="menu" id="navbar">
+        <div class="container">
+            <div class="menu-content">
+                <a href="#home" class="logo">
+                    <img src="assets/images/logo-label.png" alt="logo">
+                </a>
+                <div class="menu-list d-none d-lg-block d-lg-flex">
+                    <div class="menu-title">
+                        <a class="text-decoration-none" href="#attribute" id="productFeature"></a>
+                        <a class="text-decoration-none" href="#burgundy" id="whyBurgundy"></a>
+                    </div>
+                    <div class="action">
+                        <button
+                            class="btn btn-demo btn-gradient px-3 d-flex justify-content-center align-items-center text-white font-weight-light"
+                            id="demo"></button>
+                        <button
+                            class="sign px-3 py-2 d-flex justify-content-center align-items-center font-weight-light"
+                            id="signin"></button>
+                    </div>
+                    <div class="dropdown">
+                        <div class="dd-lang dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img id="menuImage" src="assets/images/Flag-Thailand.webp" alt="Dropdown Image">
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-right custom-dd" aria-labelledby="dropdownMenu2">
+                            <div class="dd-lang dropdown-item" onclick="toggleDropdownMenu()">
+                                <img id="toggleImage" src="assets/images/Flag-Uk.webp" alt="Toggle Language">
+                                <span id="toggleText" style="margin-left: 10px;">EN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-mobile ">
+                    <div class="btn-group">
+                        <i class="bi bi-list custom-menu" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-right dd-custom">
+                            <div class="custom-flex">
+                                <a class="text-decoration-none" style="color: #816CFF;" href="#attribute"
+                                    id="productFeatureMB"></a>
+                                <a class="text-decoration-none" style="color: #816CFF;" href="#burgundy"
+                                    id="whyBurgundyMB"></a>
+                                <a class="text-decoration-none" style="color: #816CFF;" href="" id="demoMB"></a>
+                                <a class="text-decoration-none" style="color: #816CFF;" href="" id="signinMB"></a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <div class="dd-lang dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img id="menuImageMB" src="assets/images/Flag-Thailand.webp" alt="Dropdown Image">
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right custom-dd" aria-labelledby="dropdownMenu2">
+                                <div class="dd-lang dropdown-item" onclick="toggleDropdownMenu()">
+                                    <img id="toggleImageMB" src="assets/images/Flag-Uk.webp" alt="Toggle Language">
+                                    <span id="toggleTextMB" style="margin-left: 10px;">EN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="banner col-xl-15 " id="home">
+        <div class="banner-content revealLeft">
+            <div class="banner-content1">
+                <h1 class="banner-label" id="bannerLabel"></h1>
+                <div class="banner-sublabel2" id="bannerSubLabel"></div>
+                <div class=" mt-5">
+                    <a class="demo-label text-decoration-none" href="" id="demo1"></a>
+                </div>
+            </div>
+        </div>
+        <div class="image-content1 d-flex flex-md-column flex-lg-row flex-column revealRight">
+            <img src="assets/images/GroupBanner.png" alt="">
+        </div>
+    </section>
+    <section class="burgundy-bg">
+        <div class="clip-path-background">
+            <div class="partner-section">
+                <div class="container">
+                    <div class="partner revealBottom">
+                        <h2 id="partnerTitle"></h2>
+                        <div class="logo-carousel">
+                            <div class="logo-wrapper">
+                                <!-- ชุดรูปภาพแรก -->
+                                <img src="assets/images/company1.png" alt="Logo 1">
+                                <img src="assets/images/company2.png" alt="Logo 2">
+                                <img src="assets/images/company3.png" alt="Logo 3">
+                                <img src="assets/images/company4.png" alt="Logo 4">
+                                <img src="assets/images/company5.png" alt="Logo 5">
+                                <img src="assets/images/company6.png" alt="Logo 6">
+                                <img src="assets/images/company7.png" alt="Logo 7">
+                                <img src="assets/images/company8.png" alt="Logo 8">
+                                <img src="assets/images/company9.png" alt="Logo 9" class="image"> 
+                                <img src="assets/images/company10.png" alt="Logo 10">
+                                <img src="assets/images/company11.png" alt="Logo 11" class="image">
+
+                                <!-- ชุดรูปภาพที่ซ้ำเพื่อให้เลื่อนไปแบบไม่หยุด -->
+                                <img src="assets/images/company1.png" alt="Logo 1">
+                                <img src="assets/images/company2.png" alt="Logo 2">
+                                <img src="assets/images/company3.png" alt="Logo 3">
+                                <img src="assets/images/company4.png" alt="Logo 4">
+                                <img src="assets/images/company5.png" alt="Logo 5">
+                                <img src="assets/images/company6.png" alt="Logo 6">
+                                <img src="assets/images/company7.png" alt="Logo 7">
+                                <img src="assets/images/company8.png" alt="Logo 8">
+                                <img src="assets/images/company9.png" alt="Logo 9" class="image">
+                                <img src="assets/images/company10.png" alt="Logo 10">
+                                <img src="assets/images/company11.png" alt="Logo 11" class="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="burgundy " id="burgundy">
+                <div class="burgundy-title revealBottom">
+                    <div id="whyBurgundy1"></div>
+                </div>
+                <div
+                    class="burgundy-content d-flex justify-content-md-center align-items-md-center justify-content-lg-between">
+                    <div class="burgundy-content1 ">
+                        <div class="burgundy-title1 revealLeft">
+                            <h3 id="whyBurgundyTT1"></h3>
+                            <span id="whyBurgundyST1"></span>
+                        </div>
+                        <div class="burgundy-title2 revealLeft">
+                            <h3 id="whyBurgundyTT2"></h3>
+                            <span id="whyBurgundyST2"></span>
+                        </div>
+                        <div class="burgundy-title3 revealLeft">
+                            <h3 id="whyBurgundyTT3"></h3>
+                            <span id="whyBurgundyST3"></span>
+                        </div>
+                    </div>
+                    <div class="burgundy-content2 d-none d-lg-block revealRight">
+                        <img src="assets/images/whyBurgundy.png" alt="">
+                    </div>
+                </div>
+                <div class="manage-expenses">
+                    <div class="me-content1 flex-md-column flex-lg-row flex-column align-items-center">
+                        <div class="me-img revealLeft">
+                            <img src="assets/images/GroupWhy01.png" alt="">
+                        </div>
+                        <div class="descrition-me py-md-4 ">
+                            <img src="assets/images/patient_list.png" alt="" class="revealRight">
+                            <div class="title-me revealRight" id="whyBurgundyTT4"></div>
+                            <div class="subtitle-me revealRight" id="whyBurgundyST4_1"></div>
+                            <div class="subtitle-me revealRight" id="whyBurgundyTT4_2"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="me-content2 d-flex flex-md-column flex-lg-row flex-nowrap flex-column align-items-center">
+                        <div class="descrition-me order-md-2 order-lg-1 order-2">
+                            <img src="assets/images/document_scanner.png" alt="" class="revealLeft">
+                            <div class="title-me revealLeft" id="whyBurgundyTT5"></div>
+                            <div class="subtitle-me revealLeft" id="whyBurgundyST5"></div>
+                        </div>
+                        <div class="me-img order-md-1 order-lg-2 order-1">
+                            <img src="assets/images/Group187.png" alt="" class="revealRight">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="attribute">
+            <div class="promote-burgundy px-5 py-3 px-lg-5 py-lg-5">
+                <div class="promote-burgundy-title " id="PromoteBD"></div>
+            </div>
+        </div>
+    </section>
+    <section class="burgundy-feature">
+        <div class="container">
+            <div
+                class="burg-fea1 d-flex flex-md-column flex-column flex-lg-row align-items-md-center align-items-center">
+                <div class="bur-fea1">
+                    <img src="assets/images/feature1.png" alt="" class="revealLeft">
+                </div>
+                <div class="card-fea1 revealRight">
+                    <div class="icon-fea1">
+                        <img src="assets/images/account_balance_wallet.png" alt="">
+                    </div>
+                    <div class="title-fea1" id="PromoteBDTT1"></div>
+                    <div class="subtitle-fea1" id="PromoteBDST1"></div>
+                </div>
+            </div>
+            <div
+                class="burg-fea2 d-flex flex-md-column flex-lg-row flex-nowrap align-items-md-center flex-column align-items-center">
+                <div class="card-fea2 order-md-2 order-lg-1 order-2 revealLeft">
+                    <div class="icon-fea2">
+                        <img src="assets/images/person_check.png" alt="">
+                    </div>
+                    <div class="title-fea2" id="PromoteBDTT2"></div>
+                    <div class="subtitle-fea2" id="PromoteBDST2"></div>
+                </div>
+                <div class="bur-fea2 order-md-1 order-lg-2 order-1 revealRight">
+                    <img src="assets/images/feature2.png" alt="">
+                </div>
+            </div>
+            <div
+                class="burg-fea3 d-flex flex-md-column flex-lg-row align-items-md-center flex-column align-items-center">
+                <div class="bur-fea3 revealLeft">
+                    <img src="assets/images/feature3.png" alt="">
+                </div>
+                <div class="card-fea3 revealRight">
+                    <div class="icon-fea3">
+                        <img src="assets/images/lab_profile.png" alt="">
+                    </div>
+                    <div class="title-fea3" id="PromoteBDTT3"></div>
+                    <div class="subtitle-fea3" id="PromoteBDST3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promote-account">
+        <div class="container">
+            <div
+                class="promote-content d-flex flex-nowrap flex-md-column flex-column  flex-sm-column flex-lg-row justify-content-center align-items-center">
+                <div class="pm-subtitle text-white order-sm-2 order-md-2 order-lg-1 order-2 revealLeft">
+                    <div class="pm-title text-white" id="SimulateACTT"></div>
+                    <p class="pm-subtitle1" id="SimulateACST_1"></p>
+                    <div class="pm-subtitle2-2">
+                        <i class="bi bi-check2-circle custom-pm"></i>
+                        <div class="pm-subtitle2" id="SimulateACST_2"></div>
+                    </div>
+                    <div class="pm-subtitle2-2">
+                        <i class="bi bi-check2-circle custom-pm"></i>
+                        <div class="pm-subtitle2" id="SimulateACST_3"></div>
+                    </div>
+                </div>
+                <div class="pm-img order-md-1 order-lg-2 order-sm-1 order-1 revealRight">
+                    <img src="assets/images/Group103.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal VDO -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                vdo content
+            </div>
+        </div>
+    </div>
+    <!-- attribute -->
+    <section class="attribute-sec">
+        <!-- <div class="attribute-content0">
+            <div class=" attribute-description">
+                <h4>คุณสมบัติผลิตภัณฑ์ Burgundy</h4>
+            </div>
+            <div class="attribute-img">
+                <img src="assets/images/Group190.png" alt="">
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="attribute-content d-flex flex-md-column flex-lg-row flex-column">
+                <div class="attribute-img py-md-4 py-lg-0 revealLeft">
+                    <img src="assets/images/Group185.png" alt="">
+                </div>
+                <div class="attribute d-flex justify-content-md-center revealRight">
+                    <div class="attribute-title" id="Attribute_title"></div>
+                    <div class="attribute-subtitle">
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_1"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_2"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_3"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_4"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_5"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_6"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_7"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_8"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_9"></div>
+                        </div>
+                        <div class="attribute-subtitle-1">
+                            <i class="bi bi-check2-circle custom-icon"></i>
+                            <div class="atb-subtitle-1" id="Attribute_subtitle_10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tutorial-burg">
+        <div class="container">
+            <div
+                class="tutorial-content d-flex flex-md-column flex-column flex-lg-row d-flex justify-content-md-center align-items-md-center">
+                <div class="frame-vdo revealLeft" style="max-width: 550px; width: 100%;">
+                    <div class="vdo" data-toggle="modal" data-target="#exampleModalCenter">
+                        <div class="play-vdo">
+                            <img src="assets/images/Polygon1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-vdo revealRight">
+                    <div class="title-vdo" id="Vdo_title"></div>
+                    <div class="subtitle-vdo" id="Vdo_subtitle"></div>
+                    <div class="btn-vdo" id="demo2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="text-lg-start text-muted" style="background-color: #2C245F;">
+        <section class="">
+            <div class="container text-md-start p-5 text-white">
+                <div class="row ">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" id="Company"></h6>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none" id="About_us"></a></p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" id="productFeature2"></h6>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none" id="Trips"></a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none" id="Advance"></a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none" id="Expense"></a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none"
+                                id="Expense_Vendor"></a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" id="Recommended_Products"></h6>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none">Smart Trade</a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none">E - Tax</a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none">Digital University</a>
+                        </p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none">HRMS</a></p>
+                        <p><a href="#!" class="text-reset font-weight-light text-decoration-none">SMART ERP</a></p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" id="Contact_us"></h6>
+                        <p class="font-weight-light">+66 2997 2000</p>
+                        <p class="font-weight-light">ss_bkk@softsquaregroup.com</p>
+                    </div>
+
+                    <div class="col-md-5 col-lg-3 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" id="News"></h6>
+                        <p class="font-weight-light" id="News_subtitle"></p>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control font-weight-light" placeholder="email" />
+                        </div>
+                        <button
+                            class="btn btn-news btn-gradient px-3 py-2 d-flex justify-content-center align-items-center text-white font-weight-light"
+                            id="submit"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="company-footer container p-4 text-white">
+            <div class="company">
+                <div class="logo-com">
+                    <img src="assets/images/logo-label.png" alt="logo">
+                </div>
+                <div class="font-weight-light">© 2024 Burgundy.</div>
+            </div>
+            <div class="other-contact font-weight-light">
+                <div class="icon d-flex">
+                    <a class="icon-contact " href="">
+                        <img src="assets/images/instagram.png" alt="instagram" />
+                    </a>
+                    <a class="icon-contact" href="">
+                        <img src="assets/images/facebook.png" alt="instagram" />
+                    </a>
+                </div>
+                <div class="d-flex">
+                    <p class="" id="Privacy_Policy"></p>
+                    <p class="px-2">|</p>
+                    <p id="Cookies_Policy"></p>
+                    <p class="px-2">|</p>
+                    <p id="Manage_cookies"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
