@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    font-family: "Kanit" !important;
+    font-size: 22px;
+    color: #585858;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    height: 90px;
+    vertical-align: middle;
+}
+
+.header-title {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-top: 5%;
+}
+
+.header-title p {
+    line-height: 0.4;
+    font-weight: bold;
+    color: #585858;
+}
+
+.header-title p:nth-child(2) {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.btn-demo {
+    background: linear-gradient(115deg, #816cff 34.2%, #A9BDFE 136.43%);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+.btn-demo:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.header-content {
+    background: linear-gradient(63deg, rgba(129,108,255,1) 0%, rgba(255,255,255,0) 100%);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.header-content span:nth-child(2) {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.workflow h2 {
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.workflow-process {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.workflow-step {
+    text-align: center;
+    width: 22%;
+}
+
+.workflow-step img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.workflow-step h3 {
+    margin: 10px 0;
+    color: #4a4a4a;
+}
+
+.workflow-step p {
+    color: #6c6c6c;
+}
+
+.user-cards {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.user-card {
+    width: 350px;
+    padding: 20px;
+    background-color: #f7e8ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.user-card:nth-child(even) {
+    background-color: #DDE5FF;
+}
+
+.user-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
+
+.user-card h5 {
+    margin: 5px 0;
+    font-size: 0.8em;
+    color: #4a4a4a;
+}
+
+.user-card p {
+    margin: 5px 0;
+    color: #6c6c6c;
+    font-size: 0.6em;
+}
+
+.credentials {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-size: 0.8em;
+}
+
+.credentials span {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.user-card .content img.icon {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    margin-right: 0px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #939393;
+    margin-top: 5%;
+}

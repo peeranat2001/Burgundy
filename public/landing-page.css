@@ -782,6 +782,7 @@ html {
 
             .btn-vdo {
                 background: linear-gradient(115deg, #816cff 34.2%, #A9BDFE 136.43%);
+                color: white;
                 border: none;
                 padding: 10px;
                 border-radius: 5px;
@@ -795,6 +796,7 @@ html {
             .btn-vdo:hover {
                 opacity: 0.9;
                 color: white;
+                text-decoration: none;
             }
         }
     }
