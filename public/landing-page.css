@@ -1137,3 +1137,12 @@ footer {
         transform: translateX(-50%);
     }
 }
+
+.modal-dialog{
+    width: 100%;
+    max-width: 700px !important;
+    
+}
+.youtube-iframe{
+    height: 400px !important;
+}

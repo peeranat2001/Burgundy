@@ -197,3 +197,16 @@ logos.forEach(logo => {
         logoWrapper.style.animationPlayState = 'running';
     });
 });
+
+const modal = $('#exampleModalCenter');
+const iframe = $('.youtube-iframe')[0];
+const videoSrc = "https://www.youtube.com/embed/JW3L6ARUof4?enablejsapi=1";
+
+modal.on('shown.bs.modal', function () {
+    iframe.src = videoSrc;
+});
+
+modal.on('hidden.bs.modal', function () {
+    iframe.src = videoSrc;
+    $('button[data-target="#exampleModalCenter"]').focus();
+});
